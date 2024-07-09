@@ -12,9 +12,9 @@
         Decrypts the message using the private key (d, n).
 
 ## How to run:
-    g++ ./RSA_vbevia_Cpp/rsa.cpp ./RSA_vbevia_Cpp/rsa.cpp -o cma 
+    g++ rsa.cpp rsa.cpp -o cma 
 ### To enable C++11, use the following command:
-    g++ -std=c++11 ./RSA_vbevia_Cpp/rsa.cpp -o ./RSA_vbevia_Cpp/rsa.cpp -o rsa 
+    g++ -std=c++11 rsa.cpp -o rsa.cpp -o rsa 
 #### To run the program, use this command:
     ./rsa
 
