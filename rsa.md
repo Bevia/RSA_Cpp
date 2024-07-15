@@ -12,18 +12,35 @@
         Decrypts the message using the private key (d, n).
 
 ## How to run:
-    g++ rsa.cpp rsa.cpp -o cma 
+    g++ rsa.cpp rsa.cpp -o rsa 
+    g++ signing.cpp signing.cpp -o signing 
+
 ### To enable C++11, use the following command:
     g++ -std=c++11 rsa.cpp -o rsa.cpp -o rsa 
     g++ -std=c++11 signing.cpp -o signing.cpp -o signing 
     g++ -std=c++11 signing_no_openssl.cpp -o signing_no_openssl.cpp -o signing_no_openssl 
+
+### openssl installation
+
+find / -name rsa.h 2>/dev/null    
+brew --prefix openssl
+
+g++ -std=c++11 -o signing signing.cpp -I/opt/homebrew/opt/openssl@3/lib -I/opt/homebrew/opt/openssl@3/include -lssl -lcrypto
+
+g++ -o signing signing.cpp -I/opt/homebrew/opt/openssl@3/include -lssl -lcrypto
+
+
+
+g++ -o signing signing.cpp -lssl -lcrypto
+
+
     
 #### To run the program, use this command:
     ./rsa
     ./signing
     ./signing_no_openssl
 
-## Theory by Vincent Bevia
+## Theory by Vincent Bevi
 
 Generating Public Key
 

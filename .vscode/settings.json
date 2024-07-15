@@ -1,5 +1,6 @@
 {
     "cmake.configureOnOpen": true,
     "cmake.sourceDirectory": "${workspaceFolder}",
-    "cmake.buildDirectory": "${workspaceFolder}/build"
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "DockerRun.DisableDockerrc": true
 }
