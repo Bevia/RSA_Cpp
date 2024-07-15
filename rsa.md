@@ -15,8 +15,13 @@
     g++ rsa.cpp rsa.cpp -o cma 
 ### To enable C++11, use the following command:
     g++ -std=c++11 rsa.cpp -o rsa.cpp -o rsa 
+    g++ -std=c++11 signing.cpp -o signing.cpp -o signing 
+    g++ -std=c++11 signing_no_openssl.cpp -o signing_no_openssl.cpp -o signing_no_openssl 
+    
 #### To run the program, use this command:
     ./rsa
+    ./signing
+    ./signing_no_openssl
 
 ## Theory by Vincent Bevia
 
