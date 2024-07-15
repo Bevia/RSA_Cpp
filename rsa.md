@@ -21,29 +21,14 @@
     g++ -std=c++11 signing_no_openssl.cpp -o signing_no_openssl.cpp -o signing_no_openssl 
 
 ### openssl installation
+brew install openssl
 
-find / -name rsa.h 2>/dev/null    
-brew --prefix openssl
+find / -name rsa.h 2>/dev/null   
 
-/usr/local/include/node/openssl/rsa.h
+brew --prefix openssl  #you get /opt/homebrew/opt/openssl@3
 
-g++ -o signing -std=c++11 signing.cpp -I/opt/homebrew/opt/openssl/include/openssl -L/opt/homebrew/opt/openssl/lib -libssl -libcrypto
+g++ -o signing -std=c++11 signing.cpp -I/opt/homebrew/opt/openssl/include -L/opt/homebrew/opt/openssl/lib -lssl -lcrypto
 
-g++ -o signing -std=c++11 signing.cpp -I/opt/homebrew/opt/openssl/include/openssl -L/opt/homebrew/opt/openssl/lib -lssl -lcrypto
-
-
-/opt/homebrew/opt/openssl@3/lib/libcrypto.a
-
-g++ -std=c++11 -o signing signing.cpp -I/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
-
-
-g++ -o signing signing.cpp -lssl -lcrypto
-
-
-find /opt/homebrew/opt/openssl@3/lib -name libssl.so
-find /opt/homebrew/opt/openssl@3/lib -name libcrypto.so
-
-    
 #### To run the program, use this command:
     ./rsa
     ./signing
