@@ -7,6 +7,10 @@ Here’s how it could work in the context of securely storing a sender's public 
 1. **Sender Sends Public Key:**
    - The sender generates a public-private key pair.
    - The sender sends their public key to the recipient.
+   
+   The error RSA_sign: digest too big for rsa key suggests that the data you are trying to sign is too large for the RSA key size. 
+   RSA is typically used to sign a hash of the data, not the raw data itself, because the raw data might be too large.
+   To solve this, you should hash the data first (using SHA-256 in this case) and then sign the hash. 
 
 2. **Recipient Signs Sender’s Public Key:**
    - The recipient verifies the sender's identity through an out-of-band method or prior trust establishment.
