@@ -84,3 +84,7 @@ If the verification is successful, the recipient can be confident that the store
   - This reduces the complexity of managing individual key pair verifications.
 
 In summary, signing the sender's public key with the recipient's private key and storing it securely can work for ensuring the integrity and authenticity of the public key, provided that the initial exchange of keys is secure and trusted. This approach is useful in scenarios requiring mutual authentication and secure key management.
+
+## Conclusion
+
+The idea of signing a sender's public key with a recipient's private key and storing it securely is based on established principles of mutual authentication and trust in cryptographic communications. This approach has been used in various forms in the past, such as in SSL/TLS, PGP, and SSH, to ensure the integrity and authenticity of public keys. By leveraging these established methods, you can enhance the security and trustworthiness of your communications.
