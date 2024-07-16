@@ -17,24 +17,21 @@
 
 ### To enable C++11, use the following command:
     g++ -std=c++11 rsa.cpp -o rsa.cpp -o rsa 
-    g++ -std=c++11 signing.cpp -o signing.cpp -o signing 
-    g++ -std=c++11 signing_no_openssl.cpp -o signing_no_openssl.cpp -o signing_no_openssl 
-
-### openssl installation
-brew install openssl
-
-find / -name rsa.h 2>/dev/null   
-
-brew --prefix openssl  #you get /opt/homebrew/opt/openssl@3
-
-g++ -o signing -std=c++11 signing.cpp -I/opt/homebrew/opt/openssl/include -L/opt/homebrew/opt/openssl/lib -lssl -lcrypto
+    g++ -std=c++11 ./RSA_Signing/signing.cpp -o signing.cpp -o signing 
+    g++ -std=c++11 ./RSA_Signing/signing_no_openssl.cpp -o signing_no_openssl.cpp -o signing_no_openssl 
 
 #### To run the program, use this command:
     ./rsa
     ./signing
     ./signing_no_openssl
 
-## Theory by Vincent Bevi
+### openssl installation
+brew install openssl
+find / -name rsa.h 2>/dev/null   
+brew --prefix openssl  #you get /opt/homebrew/opt/openssl@3
+g++ -o signing -std=c++11 signing.cpp -I/opt/homebrew/opt/openssl/include -L/opt/homebrew/opt/openssl/lib -lssl -lcrypto
+
+## RSA Algorithm Theory by Vincent Bevia
 
 Generating Public Key
 
